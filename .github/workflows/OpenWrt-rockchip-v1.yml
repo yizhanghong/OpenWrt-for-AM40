@@ -129,7 +129,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         #make -j$(nproc) || make -j1 || make -j1 V=s
-        mkdir bin
+        #mkdir bin
         mkdir bin/targets
         mkdir bin/targets/rockchip
         mkdir bin/targets/rockchip/armv8
