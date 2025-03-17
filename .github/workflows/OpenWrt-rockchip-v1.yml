@@ -132,8 +132,8 @@ jobs:
         mkdir bin/targets
         mkdir bin/targets/rockchip
         mkdir bin/targets/rockchip/armv8
-        tar -zcvf dl.tar.gz ./dl
-        cp -f dl.tar.gz bin/targets/rockchip/armv8        
+        tar -zcvf bin/targets/rockchip/armv8/dl.squashfs-sysupgrade.img.tar.gz ./dl
+        #cp -f dl.squashfs-sysupgrade.img.tar.gz bin/targets/rockchip/armv8        
         echo "status=success" >> $GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
